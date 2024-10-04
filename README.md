@@ -68,7 +68,7 @@ Contributions are welcome! If you'd like to report an issue or suggest a feature
 
 ## Authors
 
-- **[Tam Nguyen]** - Initial work
+- **Tam Nguyen** - Initial work
 
 ---
 
