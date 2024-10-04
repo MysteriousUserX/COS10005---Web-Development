@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liquid Button Animation</title>
+    <link rel="stylesheet" href="style/desktop.css">
+    <link rel="stylesheet" href="style/mobile.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        
+        <nav id="desktop-nav">
+            <div class="logo">Tam Nguyen</div>
+            <div>
+                <ul class="nav-links">
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="hometown.html">Hometown</a></li>
+                    <li><a href="favourite.html">Favourite</a></li>
+                    <li><a href="animation.html">Animation</a></li>
+                </ul>
+            </div>
+        </nav>
+    
+    
+    </header>
+
+    <main>
+        <article>
+            <h1 class="heading">Liquid Button Animation</h1>
+            <p class="author">By Nguyen Duc Tam</p>
+            <p>I have implemented an animation to the <strong>About Me</strong> button on the <a href="about.html">About page</a>. This is the CSS code that I have used to make this animation, I will further explain this code down below </p>
+
+            <div id="captures">
+                <img src="images/screenshot1.png" alt="Screenshot1">
+                <img src="images/screenshot2.png" alt="screenshot2">
+            </div>
+
+            <ol id="code-explain">
+                <li><strong>#button</strong>: This selector targets an element with the ID "button" (presumably a button in HTML). It sets various styles like padding, display, text decoration, etc., to give it a certain appearance.</li>
+                <li><strong>a strong</strong>: This selector targets a <strong>strong</strong> element within an anchor (<strong>a</strong>) element. It sets styles like font family, weight, color, etc., for the text inside the button.</li>
+                <li><strong>a .liquid</strong>: This selector targets an element with the class "liquid" that is a child of an anchor (<strong>a</strong>) element. It's positioned absolutely to cover a portion of the button area. This is the liquid part that animates on hover.</li>
+                <li><strong>a:hover .liquid</strong>: This selector targets the liquid element when the parent anchor element is hovered over. It changes the position of the liquid, making it move upward (<strong>top: -120px;</strong>).</li>
+                <li><strong>a .liquid:before</strong> and <strong>a .liquid:after</strong>: These pseudo-elements create two additional elements within the liquid element. They are positioned absolutely to cover the entire area of the liquid. They are used to create the visual effect of the liquid. One has a white background (before), and the other has a green background (after).</li>
+                <li><strong>@keyframes animate</strong>: This defines an animation called "animate". It rotates the liquid elements from 0 degrees to 360 degrees around their center point. This gives the illusion of the liquid moving or swirling.</li>
+                <li>Inside <strong>@keyframes animate</strong>, <strong>0%</strong> and <strong>100%</strong> specify the starting and ending states of the animation respectively.</li>
+            </ol>
+            
+            <p>In summary, this CSS code creates a button with a liquid effect that moves and swirls when hovered over. The liquid is represented by a greenish shape that rises slightly above the button's surface. The animation creates a rotating effect, giving the impression of flowing liquid.</p>
+
+        </article>
+    </main>
+
+        <!-- Footer -->
+        <footer>
+            <!-- Divide the content into 3 columns  -->
+            <div class="columns">
+        
+                <!--  Place company logo in the first column     -->
+                <div class="column1">
+                    <p>
+                        <strong>Site Links</strong>
+                    </p>
+                    <a href="about.html">About</a>
+                    <a href="hometown.html">Hometown</a>
+                    <a href="favourite.html">Favourite</a>
+                    <a href="animation.html">Animation</a>
+                </div>
+        
+        
+                <!--    Quick navigation in the 2nd column    -->
+                <div class="column2">
+                    <form method="post" action="https://mercury.swin.edu.au/it000000/formtest.php">
+                        <label for="newsletter">Want to contact me for some business? Leave your email here</label>
+                        <input type="email" name="email" id="newsletter" placeholder="Your email address">
+                        <input type="submit" value="Send">
+                    </form>
+                </div>
+        
+        
+            <!--   Contact info on the 3rd column     -->
+            <div class="column3">
+                <p>
+                    <strong>Social Media</strong>
+                </p>
+                <div class="icon">
+                    <p><a href="https://www.facebook.com" target="_blank"> 
+                        <img src="images/social-fb.gif" alt="Facebook">
+                    </a></p>
+                    
+                    <p><a href="https://www.instagram.com" target="_blank">
+                        <img src="images/social-instagram.gif" alt="Instagram">
+                    </a></p>
+
+                    <p><a href="https://www.linkedin.com" target="_blank">
+                        <img src="images/social-linkedin.gif" alt="LinkedIn">
+                    </a></p>
+                </div>
+            </div>
+        </div>    
+        
+        
+            <!--   Copyright line at the bottom   -->
+            <div class="copyright">
+                <p>Copyright &copy; 2024 Nguyen Duc Tam | All rights reserved.</p>
+            </div>
+        </footer>

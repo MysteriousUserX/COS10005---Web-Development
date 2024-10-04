@@ -1,0 +1,495 @@
+/* General */
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+a, .btn{
+    transition: all 300ms ease;
+}
+
+/* ============= HEADER STYLES ============= */
+
+#desktop-nav, .nav-links {
+    display: flex;
+}
+
+/* Make the nav stay on 1 line */
+#desktop-nav{
+    justify-content: space-around;
+    align-items: center;
+    height: 17vh;
+}
+
+.nav-links{
+    gap: 2rem;
+    list-style: none;
+    font-size: 1.5rem;
+}
+
+.nav-links a {
+    color: black;
+    text-decoration: none;
+    text-decoration-color: black ;
+}
+
+/* Hover animation */
+.nav-links a:hover{
+    color: green;
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+    text-decoration-color: rgb(2, 126, 2) ;
+}
+
+#desktop-nav .logo {
+    font-size: 2rem;
+    color: black;
+}
+
+#desktop-nav .logo:hover{
+    cursor:default
+}
+
+/* ============= ABOUT PAGE STYLES ============= */
+
+/* Banner */
+
+/* Set the dimension */
+#profile{
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    height: 70vh;
+}
+
+/* Place the avatar appropriately */
+.ava-container {
+    display: flex;
+    height: 400px;
+    width: 400px;
+    margin: auto 0;
+}
+
+.ava-text {
+    align-self: center;
+    text-align: center;
+}
+
+.ava-text p {
+    font-weight: 600;
+}
+
+.ava-text1 {
+    text-align: center;
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+}
+
+
+.my-name{
+    font-size: 3rem;
+    text-align: center;
+}
+
+.ava-container img{
+    border-radius: 50%;
+    height: 400px;
+    width: 400px;
+}
+
+/* Position the button */
+.learn-more-btn{
+    margin: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CSS button animation */
+
+#button{
+    position: relative;
+    padding: 20px 50px;
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    width: 200px;
+    overflow: hidden;
+
+}
+
+a span{
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+    color: white;
+    font-size: 20px;
+}
+
+/* Add liquid animation */
+a .liquid{
+    position: absolute;
+    left: 50px;
+    top: -75px;
+    width: 200px;
+    height: 20vh;
+    background: #0b3126 ;
+    box-shadow: inset 0 0 50px rgba(48, 47, 47, 0.5);
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+a:hover .liquid{
+    top: -120px;
+}
+
+a .liquid:before,
+a .liquid:after{
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-75%);
+    background: white;
+}
+
+a .liquid:before{
+    border-radius: 45% ;
+    background: white;
+    animation: animate 5s linear infinite;
+
+}
+
+a .liquid::after{
+    border-radius: 40% ;
+    background: green;
+    animation: animate 5s linear infinite;
+
+}
+
+/* The animation  */
+@keyframes animate 
+{
+    0%{
+        transform: translate(-50%,-75%) rotate(0deg);
+    }
+
+    100%{
+        transform: translate(-50%,-75%) rotate(360deg);
+    }
+}
+
+
+/* About me */
+
+/* Positioning */
+#about-me{
+    max-width: 1300px;
+    margin-top: 64px;
+    margin-bottom: 5rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Font styles */
+#about-me h2{
+    margin-bottom: 1rem ;
+    font-weight: 600;
+}
+
+#about-me h3{
+    margin-top: 5rem;
+    margin-bottom: 1rem ;
+    font-weight: 600;
+}
+
+#about-me hr{
+    margin-bottom: 1rem;
+    opacity: 0.6;
+}
+
+#about-me p{
+    line-height: 2;
+    font-size: 1rem;
+}
+
+/* Position the list in the right place */
+#about-me ol{
+    margin-left: 15px;
+}
+
+#about-me li{
+    line-height: 2;
+    font-size: 1rem;
+}
+
+/* Timetable styles */
+#schedule{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.timetable {
+    /* Styles to the table */
+    margin-top: 25px;
+    width: 65%;
+    border: 1px solid #000; /* Add border to the table */
+    border-collapse: collapse;
+}
+
+.timetable th,
+.timetable td {
+    /* Styles of table cells: padding, text aligning and border */
+    padding: 10px;
+    font-size: 1rem;
+    text-align: center;
+    border: 1px solid #000; /* Add border to table cells */
+}
+
+
+/* ============= HOMETOWN AND FAVORITE PAGES STYLES ============= */
+
+/* General article styles */
+article{
+    display: block;
+    align-items: center;
+    width: 60%;
+    margin: 2rem auto;
+    line-height: 2;
+}
+
+/* Font styles */
+article p{
+    font-size: 1rem;
+}
+
+.heading{
+    font-size: 2rem;
+}
+.author{
+    font-style: italic;
+    opacity: 0.8;
+    margin-bottom: 1rem;
+    font-size: 14px;
+}
+
+article h2{
+    font-weight: 500;
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem ;
+}
+
+article section{
+    margin-bottom: 2rem;
+}
+
+/* Images styles */
+figure img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 3rem auto;
+    padding: 1rem 0;
+    margin-bottom: 0;
+}
+
+#attractions li{
+    margin-left: 15px;
+}
+
+/* Style the <aside> element */
+#trivia {
+    width: 25vw;
+    float: right;
+    text-align: left;
+    padding: 1rem;
+    border: 1px dashed black;
+    border-radius: 10px;
+    margin: 3rem 3rem 0 0;
+}
+
+#trivia p{
+    font-size: 14px;
+    font-style: italic;
+}
+
+/* Figcaption style */
+figcaption{
+    text-align: center;
+    opacity: 0.8;
+    font-style: italic;
+    font-size: 0.9rem;
+    margin-bottom: 3rem;
+}
+
+/* ============= ANIMATION PAGE STYLES ============= */
+
+/* Center the images */
+#captures {
+    display: flex;
+    justify-content: center; /* Horizontally center the images */
+    flex-wrap: wrap;
+}
+
+#captures img {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-right: 1rem; /* Add some space between the images */
+    max-width: 100%;
+    height: auto;
+}
+
+/* Font styles */
+#code-explain{
+    margin: 2rem 0;
+}
+
+#code-explain li{
+    margin-left: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+
+
+/* ============= FOOTER STYLES ============= */
+
+/* General footer styles */
+footer {
+    width: 100%;
+    padding: 30px 15%;
+    background: #f0f0f0;
+    display: inline-flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    margin-top: 8rem;
+}
+
+/* Columns display flex */
+.columns {
+    display: flex;
+    width: 100%;
+}
+
+/* Divide the content into 3 columns */
+.column1,
+.column2,
+.column3 {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Font styles */
+footer div h3{
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+footer div h4{
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+/* Site links styles */
+.column1 a{
+    display: block;
+    text-decoration: none;
+    font-size: 14px;
+    color: black;
+    margin-bottom: 10px;
+    transition: 0.5s;
+    opacity: 0.8;
+}
+
+/* Links hover effect */
+.column1 a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+/* Fonts */
+.column1 p, 
+.column3 p,
+.column2 label{
+    display: block;
+    text-decoration: none;
+    color: black;
+    margin-bottom: 10px;
+    transition: 0.5s;
+    text-align: center;
+    font-size: 16px;
+}
+
+
+/* Form input styles */
+.column2 input[type="email"]{
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    text-align: center;
+}
+
+.column2 input[type="submit"] {
+    display: block;
+    background: #d3d0d0;
+    color: #2d3b45;
+    border: 1px solid #c7cdd1;
+    border-radius: 3px;
+    margin: 1rem auto;
+    padding: 4px 10px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.column2 form{
+    width: 80%;
+}
+
+.column2 label{
+    font-weight: 600;
+}
+
+/* Column 3 position  */
+.column3{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+/* Icon styles */
+.icon {
+    display: flex;
+    justify-content: center;
+}
+
+.icon img{
+    height: 30px;
+    margin: auto 5px;
+}
+
+/* Copyright styles */
+.copyright{
+    text-align: center;
+    opacity: 0.8;
+}
+
+.copyright p{
+    font-size: 12px;
+}

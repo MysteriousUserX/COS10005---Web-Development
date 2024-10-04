@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Sweet Life</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- link to CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- link to external fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- link to JavaScript -->
+    <script defer src="js/script.js"></script>
+</head>
+<body id="index">
+    <header>
+        <!-- Skip link -->
+        <a href="#order-page" class="skip">Skip to main content</a>
+        <!-- Navigation bar -->
+        <nav id="desktop-nav">
+            <div class="logo-container">
+                <a href="index.html" class="logo">Sweet Life</a>
+            </div>
+            <div>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="indexMenu">Home</a></li>
+                    <li><a href="register.html" class="regisMenu">Register</a></li>
+                    <li><a href="order.html" class="orderMenu">Order</a></li>
+                    <li><a href="features.html" class="featuresMenu">Features</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Hamburger menu -->
+        <nav id="hamburger-nav">
+            <div class="logo-container">
+                <a href="index.html" class="logo">Sweet Life</a>
+            </div>
+            <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="menu-links">
+                <li><a href="index.html" class="indexMenu">Home</a></li>
+                <li><a href="register.html" class="regisMenu">Register</a></li>
+                <li><a href="order.html" class="orderMenu">Order</a></li>
+                <li><a href="features.html" class="featuresMenu">Features</a></li>
+            </ul>
+        </div>
+    </nav>
+    </header>
+
+    <main id="order-page">
+        <div class="form-container">
+        <!-- Title -->
+            <div class="account-wall">
+                <h1 class="login-title">Checkout Form</h1>
+                <h1 class="logo">Sweet Life</h1>
+            </div>
+        <!-- Call the javascript function on submit -->
+        <form id="order-form" action="http://mercury.swin.edu.au/it000000/cos10005/regtest.php" method="post" onsubmit="return validateOrder()">
+
+            <!-- Form inputs -->
+            <label for="orderType" class="orderLabel">Order Type:</label>
+            <select id="orderType" name="orderType" onchange="showDeliveryAddressField()">
+                <option value="pickup">Pickup</option>
+                <option value="delivery">Delivery</option>
+            </select>
+            <!-- Delivery Address field (initially hidden) -->
+            <div id="deliveryAddress">
+
+            </div>
+
+            <div id="billingAddress">
+                <label for="billingAddressInput" class="orderLabel">Billing Address:</label>
+                <input type="text" id="billingAddressInput" name="billingAddress">
+                <span id="billingAddressError" class="error"></span>
+            </div>
+
+            <label for="contactNumber" class="orderLabel">Contact Number:</label>
+            <input type="text" id="contactNumber" name="contactNumber">
+            <span id="contactNumberError" class="error"></span>
+
+            <label for="paymentMethod" class="orderLabel">Payment Method:</label>
+            <select id="paymentMethod" name="paymentMethod" onchange="showCreditCardField()">
+                <option value="payOnPickup" selected>Pay on Pickup</option>
+                <option value="payOnline">Pay Online</option>
+            </select>
+
+            <!-- Credit card info field (initially hidden) -->
+            <div id="creditCardInfo">
+
+                <span id="creditCardNumberError" class="error"></span>
+            </div>
+
+            <input type="submit" value="Place Order" id="order-btn">
+        </form>
+    </div>
+    </main> 
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-row">
+            <!-- Logo and site links -->
+            <div class="logo-column">
+                <div class="site-links">
+                    <a href="index.html">Home</a>
+                    <a href="register.html">Register</a>
+                    <a href="order.html">Order</a>
+                    <a href="features.html">Features</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-row">
+            <!-- Social Media Links -->
+            <div class="social-media-column">
+                <p><strong>Social Media</strong></p>
+                <div class="icon">
+                    <a href="https://www.facebook.com" target="_blank"><img src="css/images/icons8-facebook-30.png" alt="Facebook"></a>
+                    <a href="https://www.instagram.com" target="_blank"><img src="css/images/icons8-instagram-30.png" alt="Instagram"></a>
+                    <a href="https://www.linkedin.com" target="_blank"><img src="css/images/icons8-linkedin-30.png" alt="LinkedIn"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-row">
+            <!-- Copyright Information -->
+            <div class="copyright-column">
+                <p>Icons by <a href="https://icons8.com/">Icons8</a></p>
+                <p>&copy; 2024 Sweet Life. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Sweet Life</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- link to CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- link to external fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- link to JavaScript -->
+    <script defer src="js/script.js"></script>
+</head>
+<body id="index">
+    <header>
+        <!-- Skip link -->
+        <a href="#index-page" class="skip">Skip to main content</a>
+        <nav id="desktop-nav">
+            <!-- Logo -->
+            <div class="logo-container">
+                <a href="index.html" class="logo">Sweet Life</a>
+            </div>
+            <!-- Navigation bar -->
+            <div>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="indexMenu">Home</a></li>
+                    <li><a href="register.html" class="regisMenu">Register</a></li>
+                    <li><a href="order.html" class="orderMenu">Order</a></li>
+                    <li><a href="features.html" class="featuresMenu">Features</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Hamburger Menu -->
+        <nav id="hamburger-nav">
+            <div class="logo-container">
+                <a href="index.html" class="logo">Sweet Life</a>
+            </div>
+            <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="menu-links">
+                <li><a href="index.html" class="indexMenu">Home</a></li>
+                <li><a href="register.html" class="regisMenu">Register</a></li>
+                <li><a href="order.html" class="orderMenu">Order</a></li>
+                <li><a href="features.html" class="featuresMenu">Features</a></li>
+            </ul>
+        </div>
+    </nav>
+    </header>
+
+
+    <main id="index-page">
+        <!-- Banner -->
+        <div class="banner">
+            <div id="banner-content">
+                <h1 id="title">Welcome to Sweet Life!</h1>
+                <p id="desc">Step into a world where every scoop is a celebration of flavor and every bite is a journey of delight. 
+                <br>Since 2005, Sweet Life has been crafting exquisite ice creams that tantalize the taste buds and warm the heart. From our humble beginnings to becoming a beloved local hotspot, we've remained committed to serving up smiles. <br>
+                Join us as we invite you to experience the sweetest moments and create cherished memories at Sweet Life.</p>
+            </div>
+        </div>
+        
+        <section class="about-us">
+            <h2 class="heading">About Us</h2>
+            <p class="content">Established in 2005, Sweet Life has been a beloved destination for ice cream lovers in the heart of our community. Founded by two childhood friends with a passion for crafting exceptional frozen treats, Sweet Life began as a small, humble shop. Over the years, it has grown into a cherished local institution, known for its commitment to quality, creativity, and, of course, delicious ice cream.</p>
+        </section>
+
+        <section id="menu">
+            <h2 class="heading">Our Menu</h2>
+            <br>
+            <!-- Display menu items by cards -->
+            <div class="card-container">
+                <div class="cards">
+                    <img src="css/images/vanilla.png" class="card-img" alt="vanilla ice cream">
+                    <div class="card-body">
+                        <h2 class="card-title">Classic Vanilla</h2>
+                        <p class="card-info"> Our Classic Vanilla ice cream boasts the perfect balance of sweetness and richness, with the subtle aroma of Madagascar vanilla beans. It's a timeless indulgence that never fails to delight the senses.</p>
+                    </div>
+                </div>
+                <div class="cards">
+                    <img src="css/images/chocolate.png" class="card-img" alt="chocolate ice cream">
+                    <div class="card-body">
+                        <h2 class="card-title">Decadent Chocolate</h2>
+                        <p class="card-info"> Dive into a world of pure indulgence with our Decadent Chocolate ice cream, featuring a velvety-smooth texture and an intense cocoa flavor. Each spoonful is a luxurious treat for chocolate lovers.</p>
+                    </div>
+                </div>
+                <div class="cards">
+                    <img src="css/images/strawberry.png" class="card-img" alt="strawberry ice cream">
+                    <div class="card-body">
+                        <h2 class="card-title">StrawB. Bliss</h2>
+                        <p class="card-info"> Delight in the refreshing burst of flavor found in our Strawberry Bliss ice cream, made with the juiciest ripe strawberries. Its creamy consistency and fruity essence make it the perfect summertime indulgence.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Location -->
+        <section class="about-us">
+            <h2 class="heading">Location</h2>
+            <p>You can find Sweet Life nestled in the heart of downtown, conveniently located at 80 Duy Tan Street, Ha Noi. Our cozy shop offers a warm and welcoming atmosphere where you can relax and indulge in your favorite ice cream treats. Whether you're stopping by for a quick scoop or spending time with friends and family, Sweet Life is the perfect destination for sweet moments and unforgettable memories.</p>
+            
+            <!-- Google map location -->
+            <div id="googleMap">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.035568117105!2d105.78022047597713!3d21.03126278769124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab4ca80066ab%3A0x9d59e1241572bf52!2zODAgUC4gRHV5IFTDom4sIEThu4tjaCBW4buNbmcgSOG6rXUsIEPhuqd1IEdp4bqleSwgSMOgIE7hu5lpIDEwMDAwMCwgVmlldG5hbQ!5e0!3m2!1sen!2s!4v1711089388258!5m2!1sen!2s" title="location" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+    </main>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-row">
+        <!-- Logo and site links -->
+        <div class="logo-column">
+            <div class="site-links">
+                <a href="index.html">Home</a>
+                <a href="register.html">Register</a>
+                <a href="order.html">Order</a>
+                <a href="features.html">Features</a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-row">
+        <!-- Social Media Links -->
+        <div class="social-media-column">
+            <p><strong>Social Media</strong></p>
+            <div class="icon">
+                <a href="https://www.facebook.com" target="_blank"><img src="css/images/icons8-facebook-30.png" alt="Facebook"></a>
+                <a href="https://www.instagram.com" target="_blank"><img src="css/images/icons8-instagram-30.png" alt="Instagram"></a>
+                <a href="https://www.linkedin.com" target="_blank"><img src="css/images/icons8-linkedin-30.png" alt="LinkedIn"></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-row">
+        <!-- Copyright Information -->
+        <div class="copyright-column">
+            <p>Icons by <a href="https://icons8.com/">Icons8</a></p>
+            <p>&copy; 2024 Sweet Life. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
